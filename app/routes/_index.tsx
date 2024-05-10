@@ -1,41 +1,47 @@
-import type { MetaFunction } from "@remix-run/node";
-
-export const meta: MetaFunction = () => {
-  return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
-  ];
-};
+import { PageContainer } from "./currency-converter";
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-    </div>
+    <PageContainer>
+      <div style={{ textAlign: "center", maxWidth: "600px" }}>
+        <h1 style={{ fontSize: "2.5rem", marginBottom: "20px" }}>
+          Trusted Global Currency Converter & Money Transfer Solutions
+        </h1>
+        <p style={{ fontSize: "1.2rem", marginBottom: "30px" }}>
+          Best source for currency conversion, sending money online and tracking
+          exchange rates
+        </p>
+        <a
+          href="/currency-converter"
+          style={{
+            display: "inline-block",
+            backgroundColor: "#FFFFFF",
+            color: "#000000",
+            padding: "10px 20px",
+            borderRadius: "5px",
+            textDecoration: "none",
+            margin: "0 10px",
+            fontWeight: "bold",
+          }}
+        >
+          Convert
+        </a>
+        <a
+          href="/sign-in"
+          style={{
+            display: "inline-block",
+            backgroundColor: "#FFFFFF",
+            color: "#000000",
+            padding: "10px 20px",
+            borderRadius: "5px",
+            textDecoration: "none",
+            margin: "0 10px",
+            fontWeight: "bold",
+          }}
+        >
+          Sign In
+        </a>
+      </div>
+    </PageContainer>
   );
 }
